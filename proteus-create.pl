@@ -7,7 +7,7 @@ use SOAP::Lite;
 use LWP::Simple qw(get);
 $ENV{HTTPS_CA_FILE} = "";
 my $cfg_proteus_api_user = "te0s0067";
-my $cfg_proteus_api_password = "/Thgq0*0wa";
+my $cfg_proteus_api_password = "";
 $service = Service->connect("address" => '135.107.21.203', "enableSSL" => 'true' );
 
 ## log in and establish a session
