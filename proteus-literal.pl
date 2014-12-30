@@ -6,7 +6,7 @@ use API;
 use SOAP::Lite;
 $ENV{PERL_LWP_SSL_VERIFY_HOSTNAME}=0;
 my $cfg_proteus_api_user = "TE0S00067";
-my $cfg_proteus_api_password = "/Thgq0*0wa";
+my $cfg_proteus_api_password = "";
 $service = Service->connect("address" => '135.107.21.203', "enableSSL" => 'true' );
 
 ## log in and establish a session
