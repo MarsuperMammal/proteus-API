@@ -37,7 +37,7 @@ SOAP::Data->type( 'int' )->name( 'count' )->value( 15 )->attr({xmlns => ''}))->v
     $n=$n+1;
   }
 for $rec (@aliases) {
-  unless (any {$rec eq $_} (keys %seen)){
+  unless ($rec ~~ %seen){
     $service->addAliasRecord(SOAP::Data->type( 'long' )->name( 'viewId' )->value( '473968' )->attr({xmlns => ''}),
     SOAP::Data->type( 'string' )->name( 'absoluteName' )->value( "$rec#.$domain" )->attr({xmlns => ''}),
     SOAP::Data->type( 'string' )->name( 'linkedRecordName' )->value( $fqdn )->attr({xmlns => ''}),
@@ -67,7 +67,7 @@ SOAP::Data->type( 'int' )->name( 'count' )->value( 15 )->attr({xmlns => ''}))->v
     $n=$n+1;
   }
 for $rec (@aliases) {
-  unless (any {$rec eq $_} (keys %seen)){
+  unless ($rec ~~ %seen){
     $service->addAliasRecord(SOAP::Data->type( 'long' )->name( 'viewId' )->value( '473968' )->attr({xmlns => ''}),
       SOAP::Data->type( 'string' )->name( 'absoluteName' )->value( "$rec#.$domain" )->attr({xmlns => ''}),
       SOAP::Data->type( 'string' )->name( 'linkedRecordName' )->value( $fqdn )->attr({xmlns => ''}),
